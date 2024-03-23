@@ -7,20 +7,25 @@ import 'package:vector_math/vector_math_lists.dart';
 
 extension VME on vm.Vector3 {
   vm64.Vector3 toVM64() {
-    return vm64.Vector3(this.x, this.y, this.z);
+    return vm64.Vector3(x, y, z);
   }
 }
 
 class Sphere3D extends Group3D {
-  Sphere3D(double radius, vm64.Vector3 position, {Color? color})
+  Sphere3D(this.radius, this.position, {this.color})
       : super(_getFigures(radius, position, color: color));
+
+  //for testing
+  double radius;
+  vm64.Vector3 position;
+  Color? color;
 }
 
 List<Model3D> _getFigures(double radius, vm64.Vector3 position,
     {Color? color}) {
   //make sphere vertex
   final sphere = SphereGenerator();
-  final mesh = sphere.createSphere(radius, latSegments: 4, lonSegments: 4);
+  final mesh = sphere.createSphere(radius, latSegments: 5, lonSegments: 6);
   final vertex = mesh.getViewForAttrib('POSITION')! as Vector3List;
   final index = mesh.indices!;
   final vertices = <vm.Vector3>[];

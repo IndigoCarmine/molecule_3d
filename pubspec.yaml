@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   ditredi: 2.0.2
+  vector_math: any
 
 dev_dependencies:
   flutter_test:
