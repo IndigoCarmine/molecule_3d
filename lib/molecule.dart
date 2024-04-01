@@ -1,7 +1,6 @@
 import 'package:ditredi/ditredi.dart';
 import 'package:flutter/painting.dart';
 import 'package:molecule_3d/atom_info.dart';
-import 'package:molecule_3d/fast_sphere.dart';
 import 'package:molecule_3d/sphere.dart';
 import 'package:vector_math/vector_math_64.dart';
 
@@ -25,7 +24,7 @@ class Molecule extends Group3D {
   Molecule(List<Atom> super.atoms);
 
   factory Molecule.fromXyz(String xyz) {
-    return Molecule(loadXyz(xyz));
+    return Molecule(_loadXyz(xyz));
   }
 
   @override
@@ -45,7 +44,7 @@ class Molecule extends Group3D {
   }
 }
 
-List<Atom> loadXyz(String xyz) {
+List<Atom> _loadXyz(String xyz) {
   final atoms = <Atom>[];
   final lines = xyz.split('\n');
   for (var line in lines) {

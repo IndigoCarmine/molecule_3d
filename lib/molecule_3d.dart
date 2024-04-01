@@ -1,7 +1,6 @@
 library molecule_3d;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'atom_info.dart';
+export 'molecule.dart';
+export 'viewer2.dart';
+export 'viewer.dart';

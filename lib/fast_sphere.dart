@@ -7,8 +7,6 @@ import 'package:vector_math/vector_math_64.dart' as vm64;
 import "package:vector_math/vector_math_geometry.dart";
 import 'package:vector_math/vector_math_lists.dart';
 
-import 'simd_vectors.dart';
-
 extension VME on vm.Vector3 {
   vm64.Vector3 toVM64() {
     return vm64.Vector3(x, y, z);
