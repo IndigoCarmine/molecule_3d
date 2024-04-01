@@ -1,7 +1,7 @@
 name: molecule_3d
-description: "A new Flutter package project."
+description: "A 3D molecule viewer for Flutter."
 version: 0.0.1
-homepage:
+repository: https://github.com/IndigoCarmine/molecule_3d
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ditredi: 2.0.2
-  vector_math: any
+  ditredi: ^2.0.2
+  vector_math: ^2.1.4
 
 dev_dependencies:
   flutter_test:
